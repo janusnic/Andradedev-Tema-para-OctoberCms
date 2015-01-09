@@ -172,144 +172,264 @@
   padding: 10px 15px;
   margin-top: 5px; }
 
-/* line 7, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
-body {
-  padding-top: 130px; }
+/***************************************\
 
-/* line 11, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+    jquery.kyco.easyshare
+    =====================
+
+    Version 1.0.2
+
+    Brought to you by
+    http://www.kycosoftware.com
+
+    Copyright 2014 Cornelius Weidmann
+
+    Distributed under the GPL
+
+\***************************************/
+/* line 22, /Users/werodev/Documents/code/websites/andradedev/assets/sass/inc/_share */
+[data-easyshare] * {
+  box-sizing: border-box; }
+
+/* line 26, /Users/werodev/Documents/code/websites/andradedev/assets/sass/inc/_share */
+[data-easyshare] {
+  position: relative;
+  height: 24px; }
+  /* line 30, /Users/werodev/Documents/code/websites/andradedev/assets/sass/inc/_share */
+  [data-easyshare] [data-easyshare-button] {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 8px;
+    height: 24px;
+    line-height: 24px;
+    border: 0;
+    border-radius: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer; }
+    /* line 46, /Users/werodev/Documents/code/websites/andradedev/assets/sass/inc/_share */
+    [data-easyshare] [data-easyshare-button]:hover + [data-easyshare-button-count] {
+      border-color: #959595; }
+    /* line 50, /Users/werodev/Documents/code/websites/andradedev/assets/sass/inc/_share */
+    [data-easyshare] [data-easyshare-button]:hover + [data-easyshare-button-count]:before {
+      border-right-color: #959595; }
+  /* line 56, /Users/werodev/Documents/code/websites/andradedev/assets/sass/inc/_share */
+  [data-easyshare] [data-easyshare-button="total"] {
+    cursor: default; }
+  /* line 60, /Users/werodev/Documents/code/websites/andradedev/assets/sass/inc/_share */
+  [data-easyshare] [data-easyshare-button="facebook"] {
+    background-color: #3b5998;
+    text-shadow: 1px 1px 0 #1b2947; }
+    /* line 64, /Users/werodev/Documents/code/websites/andradedev/assets/sass/inc/_share */
+    [data-easyshare] [data-easyshare-button="facebook"]:hover {
+      background-color: #2d4373; }
+  /* line 69, /Users/werodev/Documents/code/websites/andradedev/assets/sass/inc/_share */
+  [data-easyshare] [data-easyshare-button="twitter"] {
+    background-color: #00aced;
+    text-shadow: 1px 1px 0 #00506e; }
+    /* line 73, /Users/werodev/Documents/code/websites/andradedev/assets/sass/inc/_share */
+    [data-easyshare] [data-easyshare-button="twitter"]:hover {
+      background-color: #0099d3; }
+  /* line 78, /Users/werodev/Documents/code/websites/andradedev/assets/sass/inc/_share */
+  [data-easyshare] [data-easyshare-button="google"] {
+    background-color: #d34836;
+    text-shadow: 1px 1px 0 #69241b; }
+    /* line 82, /Users/werodev/Documents/code/websites/andradedev/assets/sass/inc/_share */
+    [data-easyshare] [data-easyshare-button="google"]:hover {
+      background-color: #b03626; }
+  /* line 88, /Users/werodev/Documents/code/websites/andradedev/assets/sass/inc/_share */
+  [data-easyshare] [data-easyshare-total-count], [data-easyshare] [data-easyshare-button-count] {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0 15px 0 8px;
+    padding: 0 7px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #aeaeae;
+    border-radius: 2px;
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #555;
+    cursor: default; }
+    /* line 106, /Users/werodev/Documents/code/websites/andradedev/assets/sass/inc/_share */
+    [data-easyshare] [data-easyshare-total-count]:before, [data-easyshare] [data-easyshare-total-count]:after, [data-easyshare] [data-easyshare-button-count]:before, [data-easyshare] [data-easyshare-button-count]:after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 0;
+      width: 0; }
+    /* line 114, /Users/werodev/Documents/code/websites/andradedev/assets/sass/inc/_share */
+    [data-easyshare] [data-easyshare-total-count]:before, [data-easyshare] [data-easyshare-button-count]:before {
+      top: 5px;
+      left: -6px;
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-right: 6px solid #aeaeae; }
+    /* line 122, /Users/werodev/Documents/code/websites/andradedev/assets/sass/inc/_share */
+    [data-easyshare] [data-easyshare-total-count]:after, [data-easyshare] [data-easyshare-button-count]:after {
+      top: 6px;
+      left: -5px;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-right: 5px solid #fff; }
+  /* line 131, /Users/werodev/Documents/code/websites/andradedev/assets/sass/inc/_share */
+  [data-easyshare] [data-easyshare-loader] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px; }
+
+/* line 9, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+body {
+  padding-top: 130px;
+  font-family: Lato, sans-serif; }
+
+/* line 14, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 footer {
   background-color: #2c3e50;
   margin-top: 30px;
   padding: 30px 0; }
 
-/* line 17, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 20, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: Lato, sans-serif;
   font-weight: 400; }
 
-/* line 21, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 24, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .nav.andradedev-nav {
   font-family: Lato, sans-serif;
   font-size: 1.2em;
   padding-top: 40px;
   padding-bottom: 40px; }
 
-/* line 28, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 31, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .andradedev-nav > img {
   display: inline-block; }
 
-/* line 32, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 35, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev {
   background-color: #2C3E50;
   border-color: #2C3E50; }
 
-/* line 36, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 39, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev .navbar-brand {
   color: #eee; }
 
-/* line 40, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 43, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev .navbar-brand:hover, .navbar-andradedev .navbar-brand:focus {
   color: #fff;
   background-color: transparent; }
 
-/* line 44, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 47, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev .navbar-text {
   color: #eee; }
 
-/* line 47, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 50, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev .navbar-nav > li > a {
   color: #eee; }
 
-/* line 51, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 54, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev .navbar-nav > li > a:hover, .navbar-andradedev .navbar-nav > li > a:focus {
   color: #fff;
   background-color: #34495E; }
 
-/* line 57, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 60, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev .navbar-nav > .active > a, .navbar-andradedev .navbar-nav > .active > a:hover, .navbar-andradedev .navbar-nav > .active > a:focus {
   color: #fff;
   background-color: #34495E; }
 
-/* line 63, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 66, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev .navbar-nav > .disabled > a, .navbar-andradedev .navbar-nav > .disabled > a:hover, .navbar-andradedev .navbar-nav > .disabled > a:focus {
   color: #444;
   background-color: transparent; }
 
-/* line 67, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 70, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev .navbar-toggle {
   border-color: #333; }
 
-/* line 71, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 74, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev .navbar-toggle:hover, .navbar-andradedev .navbar-toggle:focus {
   background-color: #333; }
 
-/* line 74, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 77, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev .navbar-toggle .icon-bar {
   background-color: #fff; }
 
-/* line 78, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 81, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev .navbar-collapse, .navbar-andradedev .navbar-form {
   border-color: #101010; }
 
-/* line 83, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 86, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev .navbar-nav > .open > a, .navbar-andradedev .navbar-nav > .open > a:hover, .navbar-andradedev .navbar-nav > .open > a:focus {
   color: #fff;
   background-color: #34495E; }
 
 @media (max-width: 767px) {
-  /* line 88, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+  /* line 91, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
   .navbar-andradedev .navbar-brand {
     height: auto; }
 
-  /* line 92, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+  /* line 95, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
   .navbar-andradedev .navbar-nav .open .dropdown-menu > .dropdown-header {
     border-color: #080808; }
 
-  /* line 95, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+  /* line 98, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
   .navbar-andradedev .navbar-nav .open .dropdown-menu .divider {
     background-color: #080808; }
 
-  /* line 98, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+  /* line 101, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
   .navbar-andradedev .navbar-nav .open .dropdown-menu > li > a {
     color: #eee; }
 
-  /* line 102, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+  /* line 105, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
   .navbar-andradedev .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-andradedev .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #fff;
     background-color: transparent; }
 
-  /* line 108, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+  /* line 111, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
   .navbar-andradedev .navbar-nav .open .dropdown-menu > .active > a, .navbar-andradedev .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-andradedev .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #fff;
     background-color: #080808; }
 
-  /* line 114, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+  /* line 117, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
   .navbar-andradedev .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-andradedev .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-andradedev .navbar-nav .open .dropdown-menu > .disabled > a:focus {
     color: #444;
     background-color: transparent; }
  }
 
-/* line 119, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 122, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev .navbar-link {
   color: #eee; }
 
-/* line 122, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 125, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev .navbar-link:hover {
   color: #fff; }
 
-/* line 125, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 128, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev .btn-link {
   color: #eee; }
 
-/* line 129, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 132, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev .btn-link:hover, .navbar-andradedev .btn-link:focus {
   color: #fff; }
 
-/* line 135, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 138, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .navbar-andradedev .btn-link[disabled]:hover, fieldset[disabled] .navbar-andradedev .btn-link:hover, .navbar-andradedev .btn-link[disabled]:focus, fieldset[disabled] .navbar-andradedev .btn-link:focus {
   color: #444; }
 
-/* line 139, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 142, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .brand {
   font-family: 'code_boldregular';
   font-size: 1.8em;
@@ -318,23 +438,23 @@ h1, h2, h3, h4, h5, h6 {
   color: #eee;
   margin-left: 20px; }
 
-/* line 148, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 151, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .jumbotron.andradedev {
   font-family: Lato, sans-serif;
   background-color: transparent;
   color: #333;
   -webkit-font-smoothing: antialiased; }
 
-/* line 155, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 158, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .jumbotron.andradedev p {
   color: #5c5c5c; }
 
-/* line 159, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 162, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .box > .icon {
   text-align: center;
   position: relative; }
 
-/* line 163, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 166, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .box > .icon > .image {
   position: relative;
   z-index: 2;
@@ -347,40 +467,40 @@ h1, h2, h3, h4, h5, h6 {
   background: #2B5D84;
   vertical-align: middle; }
 
-/* line 175, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 178, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .box > .icon:hover > .image {
   background: #2C3E50; }
 
-/* line 178, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 181, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .box > .icon > .image > i {
   font-size: 36px !important;
   color: #fff !important; }
 
-/* line 182, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 185, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .box > .icon:hover > .image > i {
   color: white !important; }
 
-/* line 185, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 188, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .box > .icon > .info {
   margin-top: -24px;
   background: rgba(0, 0, 0, 0.04);
   border: 1px solid #e0e0e0;
   padding: 15px 0 10px 0; }
 
-/* line 191, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 194, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .box > .icon:hover > .info {
   background: rgba(0, 0, 0, 0.04);
   border-color: #e0e0e0;
   color: white; }
 
-/* line 196, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 199, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .box > .icon > .info > h3.title {
   font-family: "Lato", sans-serif !important;
   font-size: 16px;
   color: #222;
   font-weight: 500; }
 
-/* line 202, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 205, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .box > .icon > .info > p {
   font-family: "Lato", sans-serif !important;
   font-size: 13px;
@@ -388,11 +508,11 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5em;
   margin: 20px; }
 
-/* line 209, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 212, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .box > .icon:hover > .info > h3.title, .box > .icon:hover > .info > p, .box > .icon:hover > .info > .more > a {
   color: #222; }
 
-/* line 212, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 215, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .box > .icon > .info > .more a {
   font-family: "Lato", sans-serif !important;
   font-size: 12px;
@@ -401,21 +521,21 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   text-decoration: none; }
 
-/* line 220, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 223, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .box > .icon:hover > .info > .more > a {
   color: #fff;
   padding: 6px 8px;
   background-color: #2C3E50; }
 
-/* line 225, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 228, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .box .space {
   height: 30px; }
 
-/* line 229, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 232, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .contact-form {
   margin-top: 20px; }
 
-/* line 233, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 236, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .social-icons {
   text-align: center;
   font-family: "Open Sans";
@@ -423,45 +543,45 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5em;
   color: #fff; }
 
-/* line 240, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 243, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .social-icons h1 {
   margin: 40px 0; }
 
-/* line 243, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 246, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .social-icons ul {
   list-style: none;
   margin: 0;
   padding: 0; }
 
-/* line 248, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 251, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .social-icons ul li {
   display: inline-block;
   zoom: 1;
   *display: inline;
   vertical-align: middle; }
 
-/* line 254, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 257, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .social-icons ul li a {
   display: block;
   font-size: 1.4em;
   margin: 0 5px;
   text-decoration: none; }
 
-/* line 260, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 263, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .social-icons ul li a i {
   color: #fff;
   transition: all 0.2s ease-in; }
 
-/* line 264, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 267, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .social-icons ul li a:hover i {
   color: #275066; }
 
-/* line 268, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 271, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .social-icons ul li a:focus i, .social-icons ul li a:active i {
   transition: none;
   color: #0b161c; }
 
-/* line 273, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 276, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .colorgraph {
   height: 5px;
   border-top: 0;
@@ -469,68 +589,68 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 5px;
   background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4); }
 
-/* line 281, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 284, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .contact-home {
   margin-bottom: 20px; }
 
-/* line 285, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 288, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .testimonials-title {
   margin-top: 20px; }
 
 /* Buttons */
-/* line 291, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 294, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .btn {
   border-radius: 0;
   text-transform: uppercase;
   font-size: 13px; }
 
-/* line 296, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 299, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .btn-default {
   color: #fff;
   background-color: #404040;
   border-color: #404040; }
 
-/* line 301, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 304, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
   color: #000000;
   background-color: #f6f6f6;
   border-color: #aeaeae; }
 
-/* line 306, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 309, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .btn-primary {
   color: #ffffff;
   background-color: #2c3e50;
   border-color: #233140; }
 
-/* line 317, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 320, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
   color: #ffffff;
   background-color: #2B5D84;
   border-color: #0d1318; }
 
-/* line 324, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 327, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
   background-image: none; }
 
-/* line 344, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 347, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
   background-color: #2c3e50;
   border-color: #233140; }
 
-/* line 348, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 351, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .btn-primary .badge {
   color: #2c3e50;
   background-color: #ffffff; }
 
 /*testimonials*/
 /* carousel */
-/* line 356, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 359, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 #quote-carousel {
   padding: 0 10px 30px 10px;
   margin-top: 30px; }
 
 /* Control buttons  */
-/* line 363, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 366, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 #quote-carousel .carousel-control {
   background: none;
   color: #222;
@@ -539,17 +659,17 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 30px; }
 
 /* Previous button  */
-/* line 372, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 375, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 #quote-carousel .carousel-control.left {
   left: -12px; }
 
 /* Next button  */
-/* line 377, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 380, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 #quote-carousel .carousel-control.right {
   right: -12px !important; }
 
 /* Changes the position of the indicators */
-/* line 382, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 385, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 #quote-carousel .carousel-indicators {
   right: 50%;
   top: auto;
@@ -557,30 +677,30 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: -19px; }
 
 /* Changes the color of the indicators */
-/* line 390, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 393, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 #quote-carousel .carousel-indicators li {
   background: #c0c0c0; }
 
-/* line 394, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 397, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 #quote-carousel .carousel-indicators .active {
   background: #333333; }
 
-/* line 398, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 401, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 #quote-carousel img {
   width: 250px;
   height: 100px; }
 
 /* End carousel */
-/* line 405, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 408, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .item blockquote {
   border-left: none;
   margin: 0; }
 
-/* line 410, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 413, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .item blockquote img {
   margin-bottom: 10px; }
 
-/* line 414, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 417, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .item blockquote p:before {
   content: "\f10d";
   font-family: 'Fontawesome';
@@ -592,7 +712,7 @@ h1, h2, h3, h4, h5, h6 {
 */
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  /* line 429, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+  /* line 432, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
   #quote-carousel {
     margin-bottom: 0;
     padding: 0 40px 30px 40px; }
@@ -601,36 +721,36 @@ h1, h2, h3, h4, h5, h6 {
 /* Small devices (tablets, up to 768px) */
 @media (max-width: 768px) {
   /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
-  /* line 442, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+  /* line 445, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
   #quote-carousel .carousel-indicators {
     bottom: -20px !important; }
 
-  /* line 445, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+  /* line 448, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
   #quote-carousel .carousel-indicators li {
     display: inline-block;
     margin: 0px 5px;
     width: 15px;
     height: 15px; }
 
-  /* line 451, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+  /* line 454, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
   #quote-carousel .carousel-indicators li.active {
     margin: 0px 5px;
     width: 20px;
     height: 20px; }
  }
 
-/* line 458, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 461, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .copy {
   margin-top: 15px;
   color: #fff;
   padding-left: 80px; }
 
-/* line 464, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 467, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .progress {
   position: relative;
   height: 25px; }
 
-/* line 468, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 471, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .progress > .progress-type {
   position: absolute;
   left: 0px;
@@ -639,22 +759,22 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   background-color: rgba(25, 25, 25, 0.2); }
 
-/* line 476, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 479, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .progress > .progress-completed {
   position: absolute;
   right: 0px;
   font-weight: 800;
   padding: 3px 10px 2px; }
 
-/* line 483, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 486, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .label-primary {
   background-color: #2c3e50; }
 
-/* line 488, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 491, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
-/* line 492, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 495, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card {
   font-family: Lato, sans-serif;
   margin-top: 10px;
@@ -662,33 +782,33 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 2px;
   background-clip: padding-box; }
 
-/* line 499, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 502, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card span.card-title {
   color: #fff;
   font-size: 24px;
   font-weight: 300;
   text-transform: uppercase; }
 
-/* line 506, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 509, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-image {
   position: relative;
   overflow: hidden; }
 
-/* line 510, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 513, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-image img {
   border-radius: 2px 2px 0 0;
   background-clip: padding-box;
   position: relative;
   z-index: -1; }
 
-/* line 516, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 519, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-image span.card-title {
   position: absolute;
   bottom: 0;
   left: 0;
   padding: 16px; }
 
-/* line 523, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 526, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-titlet {
   padding: 8px 16px;
   border-radius: 0 0 2px 2px;
@@ -697,7 +817,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #e7e7e7;
   text-align: center; }
 
-/* line 532, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 535, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-titlet h2 {
   font-size: 2em;
   line-height: 1;
@@ -707,50 +827,55 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-weight: 700; }
 
-/* line 542, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 545, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-content {
   padding: 16px;
   border-radius: 0 0 2px 2px;
   background-clip: padding-box;
   box-sizing: border-box; }
 
-/* line 548, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 551, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-content.author {
   background-color: #f4f4f4; }
 
-/* line 551, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 554, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-content p {
   margin: 0;
   color: inherit; }
 
-/* line 555, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 558, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-content span.card-title {
   line-height: 48px; }
 
-/* line 558, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 561, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-action {
   border-top: 1px solid rgba(160, 160, 160, 0.2);
   padding: 16px; }
 
-/* line 562, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 565, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-action a {
-  color: #ffab40;
-  margin-right: 16px;
+  color: #fff;
   transition: color 0.3s ease;
   text-transform: uppercase; }
 
-/* line 568, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 570, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-action a:hover {
-  color: #ffd8a6;
+  color: #fff;
   text-decoration: none; }
 
-/* line 573, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 575, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .form-control {
   border-radius: 0; }
 
-/* line 577, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 579, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .well.comments {
   border-radius: 0;
   background-color: #fff; }
+
+/* line 584, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+.alert-primary {
+  color: #ffffff;
+  background-color: #2B5D84;
+  border-color: #0d1318; }
 
 /*# sourceMappingURL=andradedev.css.map */

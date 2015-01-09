@@ -1,11 +1,14 @@
 @import "inc/_fonts";
 @import "inc/_process";
 @import "inc/_proyectos";
+@import "inc/_share";
+
 
 
 
 body{
     padding-top: 130px;
+    font-family: Lato, sans-serif;
 }
 
 footer{
@@ -560,13 +563,12 @@ fieldset[disabled] .btn-primary.active {
   padding: 16px;
 }
 .card .card-action a {
-  color: #ffab40;
-  margin-right: 16px;
+  color: #fff;
   transition: color 0.3s ease;
   text-transform: uppercase;
 }
 .card .card-action a:hover {
-  color: #ffd8a6;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -577,4 +579,10 @@ fieldset[disabled] .btn-primary.active {
 .well.comments{
     border-radius: 0;
     background-color: #fff;
+}
+
+.alert-primary{
+    color: #ffffff;
+    background-color: #2B5D84;
+    border-color: #0d1318;
 }
