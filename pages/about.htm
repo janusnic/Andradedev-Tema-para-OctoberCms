@@ -1,53 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Jorge Andrade ">
-    <link rel="icon" href="assets/favicon.ico">
-
-    <title>Jorge Andrade | Laravel Developer</title>
-
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900|Open+Sans|Roboto">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-    <link href="assets/css/andradedev.css" rel="stylesheet">
-</head>
-
-<body>
-
-    <nav class="navbar navbar-andradedev navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand andradedev-nav" href="#">
-                    <img src="https://s.gravatar.com/avatar/071f45a824f9a6d3bfdc79a97e531383?s=100" alt="Jorge Andrade Gravatar" class="img-circle">
-                    <span class="brand">Jorge Andrade</span>
-                </a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav andradedev-nav navbar-right">
-                    <li class="active"><a href="quiensoy.html">Quien Soy</a>
-                    </li>
-                    <li><a href="proyectos.html">Proyectos</a>
-                    </li>
-                    <li><a href="blog.html">Blog</a>
-                    </li>
-                    <li><a href="#contacto.html">Contactame</a>
-                    </li>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
-        </div>
-    </nav>
+title = "Quien Soy"
+url = "/about"
+layout = "default"
+==
 
     <div class="jumbotron text-center andradedev">
         <div class="container">
@@ -143,47 +97,6 @@
                 <div class="process-line"></div>
 
             </div>
-            <p class="text-center"><a href="/contacto.html" class="btn btn-primary btn-lg" role="button">Contratame</a></p>
+            <p class="text-center"><a href="{{ 'contacto'|default}}" class="btn btn-primary btn-lg" role="button">Contratame</a></p>
     </div>
 <!-- end process work-->
-
-    <!-- fin seccion contacto -->
-    <footer class="container-fluid">
-        <div class="row">
-            <div class="col-md-4 copy">
-                <p class="small">&copy; Jorge Andrade</p>
-            </div>
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-                <div class="social-icons">
-                    <ul>
-                        <li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="https://facebook.com"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
-                        </li>
-                        <li><a href="https://pinterest.com"><i class="fa fa-pinterest"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script>
-        // When the DOM is ready, run this function
-        $(document).ready(function () {
-            //Set the carousel options
-            $('#quote-carousel').carousel({
-                pause: true,
-                interval: 4000,
-            });
-        });
-    </script>
-
-</body>
-
-</html>
