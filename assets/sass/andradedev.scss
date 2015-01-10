@@ -499,7 +499,8 @@ fieldset[disabled] .btn-primary.active {
   border-radius: 2px;
   background-clip: padding-box;
 }
-.card span.card-title {
+.card span.card-title,
+.card span.card-meta{
     color: #fff;
     font-size: 24px;
     font-weight: 300;
@@ -520,6 +521,13 @@ fieldset[disabled] .btn-primary.active {
   position: absolute;
   bottom: 0;
   left: 0;
+  padding: 16px;
+}
+
+.card .card-image span.card-meta {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   padding: 16px;
 }
 

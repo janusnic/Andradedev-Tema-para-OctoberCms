@@ -782,33 +782,40 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 2px;
   background-clip: padding-box; }
 
-/* line 502, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
-.card span.card-title {
+/* line 503, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+.card span.card-title, .card span.card-meta {
   color: #fff;
   font-size: 24px;
   font-weight: 300;
   text-transform: uppercase; }
 
-/* line 509, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 510, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-image {
   position: relative;
   overflow: hidden; }
 
-/* line 513, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 514, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-image img {
   border-radius: 2px 2px 0 0;
   background-clip: padding-box;
   position: relative;
   z-index: -1; }
 
-/* line 519, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 520, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-image span.card-title {
   position: absolute;
   bottom: 0;
   left: 0;
   padding: 16px; }
 
-/* line 526, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 527, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+.card .card-image span.card-meta {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 16px; }
+
+/* line 534, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-titlet {
   padding: 8px 16px;
   border-radius: 0 0 2px 2px;
@@ -817,7 +824,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #e7e7e7;
   text-align: center; }
 
-/* line 535, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 543, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-titlet h2 {
   font-size: 2em;
   line-height: 1;
@@ -827,52 +834,52 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-weight: 700; }
 
-/* line 545, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 553, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-content {
   padding: 16px;
   border-radius: 0 0 2px 2px;
   background-clip: padding-box;
   box-sizing: border-box; }
 
-/* line 551, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 559, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-content.author {
   background-color: #f4f4f4; }
 
-/* line 554, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 562, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-content p {
   margin: 0;
   color: inherit; }
 
-/* line 558, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 566, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-content span.card-title {
   line-height: 48px; }
 
-/* line 561, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 569, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-action {
   border-top: 1px solid rgba(160, 160, 160, 0.2);
   padding: 16px; }
 
-/* line 565, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 573, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-action a {
   color: #fff;
   transition: color 0.3s ease;
   text-transform: uppercase; }
 
-/* line 570, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 578, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .card .card-action a:hover {
   color: #fff;
   text-decoration: none; }
 
-/* line 575, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 583, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .form-control {
   border-radius: 0; }
 
-/* line 579, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 587, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .well.comments {
   border-radius: 0;
   background-color: #fff; }
 
-/* line 584, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
+/* line 592, /Users/werodev/Documents/code/websites/andradedev/assets/sass/andradedev.scss */
 .alert-primary {
   color: #ffffff;
   background-color: #2B5D84;
